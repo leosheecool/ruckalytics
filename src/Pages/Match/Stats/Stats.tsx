@@ -11,7 +11,10 @@ type Props = {
 	activeVideo?: string;
 };
 
-const TABS = ['Scrums', 'Fouls'];
+const TABS = [
+	{ key: 'scrums', title: 'Mêlées' },
+	{ key: 'fouls', title: 'Fautes' },
+];
 
 const Stats = ({ stats, onActionClick: handleActionClick, activeVideo }: Props) => {
 	const [activeTab, setActiveTab] = useState(TABS[0]);
@@ -20,16 +23,16 @@ const Stats = ({ stats, onActionClick: handleActionClick, activeVideo }: Props) 
 			<div className={styles.tabContainer}>
 				{TABS.map((tab) => (
 					<p
-						key={tab}
-						className={cn(styles.tab, { [styles.active]: tab === activeTab })}
+						key={tab.key}
+						className={cn(styles.tab, { [styles.active]: tab.key === activeTab.key })}
 						onClick={() => setActiveTab(tab)}
 					>
-						{tab}
+						{tab.title}
 					</p>
 				))}
 			</div>
 
-			{stats[activeTab.toLowerCase() as keyof GolbalStats]?.map((action) => {
+			{stats[activeTab.key as keyof GolbalStats]?.map((action) => {
 				const timecode = secondsToTime(action.timeCode);
 				return (
 					<div

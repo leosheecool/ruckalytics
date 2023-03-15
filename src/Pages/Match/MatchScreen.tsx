@@ -1,6 +1,6 @@
 import { DetailsHeader, MatchCard } from 'Components';
 import { useEffect, useMemo, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Stats from './Stats/Stats';
 import styles from './MatchScreen.module.scss';
 import { matchs } from 'Mocks/matchs.mocks';
@@ -9,7 +9,8 @@ import ReactPlayer from 'react-player';
 const MatchScreen = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
-	const mockedData = matchs[0];
+	const { id } = useParams<{ id: string }>();
+	const mockedData = matchs[parseInt(id || '0', 10)];
 	const [videoUrl, setVideoUrl] = useState<string>();
 
 	const tabs = useMemo(
@@ -29,9 +30,13 @@ const MatchScreen = () => {
 	);
 
 	useEffect(() => {
-		if (!Object.keys(tabs).includes(location.hash) || !location.hash)
+		if (
+			!Object.keys(tabs).includes(location.hash) ||
+			!location.hash ||
+			(location.hash === '#video' && !videoUrl)
+		)
 			navigate('#stats', { replace: true });
-	}, [location.hash, navigate, tabs]);
+	}, [location.hash, navigate, tabs, videoUrl]);
 
 	const navigateToTab = (hash: string) => {
 		return tabs[hash as keyof typeof tabs];
@@ -51,13 +56,6 @@ const MatchScreen = () => {
 		<div>
 			<DetailsHeader />
 			<div className={styles.container}>
-				{/* <ReactPlayer
-					className="react-player fixed-bottom"
-					url="http://localhost:3000/test.mp4"
-					width="100%"
-					height="100%"
-					controls={true}
-				/> */}
 				{navigateToTab(location.hash)}
 				<Stats stats={mockedData.stats} onActionClick={handleActionClick} activeVideo={videoUrl} />
 			</div>

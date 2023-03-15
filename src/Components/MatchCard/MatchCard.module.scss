@@ -3,8 +3,8 @@
 	justify-content: center;
 }
 
-span {
-	font: 500 0.8rem 'Roboto', sans-serif;
+.subInformations {
+	font: 500 1.2rem 'Roboto', sans-serif;
 	color: gray;
 }
 .team {
@@ -60,10 +60,11 @@ span {
 	border: 1px solid #06357b;
 	border-radius: 4px;
 	background-color: #06357b1e;
-	padding: 8px 16px;
+	padding: 16px;
 	color: #06357b;
+	font-size: 1.3rem;
 }
 
 .location {
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 }
