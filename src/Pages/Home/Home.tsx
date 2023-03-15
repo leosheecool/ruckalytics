@@ -1,8 +1,8 @@
 import styles from './Home.module.scss';
 //components
-import { MatchPreviewCard } from '../../Components';
+import { MatchCard } from 'Components';
 //mocks
-import { matchs } from '../../Mocks/matchs.mocks';
+import { matchs } from 'Mocks/matchs.mocks';
 const Home = () => {
 	return (
 		<div className={styles.container}>
@@ -10,7 +10,7 @@ const Home = () => {
 
 			<div className={styles.MatchPreviewCardContainer}>
 				{matchs.map((match) => (
-					<MatchPreviewCard key={match.id} data={match} />
+					<MatchCard key={match.id} data={match} />
 				))}
 			</div>
 		</div>
