@@ -12,5 +12,5 @@ export type Match = {
 	homeTeam: Team;
 	visitorTeam: Team;
 	score: { homeTeam: number; visitorTeam: number };
-	place: string;
+	location: string;
 };

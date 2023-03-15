@@ -17,7 +17,7 @@ export const matchs: Match[] = [
 			logo: 'https://example.com/team-b-logo.png',
 		},
 		score: { homeTeam: 2, visitorTeam: 1 },
-		place: 'Stade A',
+		location: 'Stade A',
 	},
 	{
 		id: 2,
@@ -35,7 +35,7 @@ export const matchs: Match[] = [
 			logo: 'https://example.com/team-d-logo.png',
 		},
 		score: { homeTeam: 1, visitorTeam: 1 },
-		place: 'Stade B',
+		location: 'Stade B',
 	},
 	{
 		id: 3,
@@ -53,6 +53,6 @@ export const matchs: Match[] = [
 			logo: 'https://example.com/team-f-logo.png',
 		},
 		score: { homeTeam: 3, visitorTeam: 0 },
-		place: 'Stade C',
+		location: 'Stade C',
 	},
 ];
