@@ -1,13 +1,57 @@
 .container {
 	display: flex;
 	justify-content: center;
-	place-items: center;
-	height: 150px;
+	height: 165px;
+	margin: 15px 0;
+	width: 600px;
+	padding: 15px;
+	box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
 }
 
+span {
+	font: 500 0.8rem 'Roboto', sans-serif;
+	color: gray;
+}
 .team {
-	width: 70px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	img {
+		height: 75px;
+		width: 75px;
+		border-radius: 50%;
+		object-fit: contain;
+	}
+	h3 {
+		text-align: center;
+		font: 500 1.2rem 'Roboto', sans-serif;
+	}
 }
 .matchInfos {
-	width: 150px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	h3 {
+		font: 900 4rem 'Roboto', sans-serif;
+	}
+
+	.result {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		font: 500 1.2rem 'Roboto', sans-serif;
+		color: white;
+		background-color: #56a42a;
+		padding: 10px 20px;
+		border-radius: 20px;
+		&.loose {
+			background-color: #e8408c;
+		}
+	}
 }
