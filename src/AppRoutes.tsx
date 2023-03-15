@@ -13,7 +13,7 @@ const AppRoutes = () => {
 					<Route path=":id" element={<MatchStatsScreen />} />
 				</Route>
 				<Route path="/home" element={<Home />} />
-				<Route path="*" />
+				<Route path="*" element={<Home />} />
 			</Routes>
 		</Suspense>
 	);
