@@ -1,0 +1,30 @@
+.container {
+	padding: 0 20px;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.162);
+	margin: 20px 0;
+	text-align: center;
+}
+
+.globalInformation {
+	margin: 0;
+}
+
+.clubLogo {
+	border-radius: 10px;
+}
+
+.scoreContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.score {
+	font-size: large;
+}
