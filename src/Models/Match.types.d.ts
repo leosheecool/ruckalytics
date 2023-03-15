@@ -7,8 +7,10 @@ export type Team = {
 export type Match = {
 	id: number;
 	utcDate: string;
-	status: string;
+	duration: number;
+	status: 'inProgress' | 'finished';
 	homeTeam: Team;
 	visitorTeam: Team;
 	score: { homeTeam: number; visitorTeam: number };
+	place: string;
 };

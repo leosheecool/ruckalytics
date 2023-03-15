@@ -1,14 +1,14 @@
-import React from "react";
-import { HashRouter } from "react-router-dom";
-import "./App.css";
-import AppRoutes from "./AppRoutes";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+import AppRoutes from './AppRoutes';
 
 const App = () => {
-  return (
-    <HashRouter>
-      <AppRoutes />
-    </HashRouter>
-  );
+	return (
+		<BrowserRouter>
+			<AppRoutes />
+		</BrowserRouter>
+	);
 };
 
 export default App;

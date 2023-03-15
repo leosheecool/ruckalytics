@@ -4,7 +4,8 @@ export const matchs: Match[] = [
 	{
 		id: 1,
 		utcDate: '2023-03-16T19:00:00Z',
-		status: 'SCHEDULED',
+		duration: 90,
+		status: 'finished',
 		homeTeam: {
 			id: 101,
 			name: 'Équipe A',
@@ -15,12 +16,14 @@ export const matchs: Match[] = [
 			name: 'Équipe B',
 			logo: 'https://example.com/team-b-logo.png',
 		},
-		score: { homeTeam: 0, visitorTeam: 0 },
+		score: { homeTeam: 2, visitorTeam: 1 },
+		place: 'Stade A',
 	},
 	{
 		id: 2,
 		utcDate: '2023-03-17T21:00:00Z',
-		status: 'SCHEDULED',
+		duration: 90,
+		status: 'inProgress',
 		homeTeam: {
 			id: 103,
 			name: 'Équipe C',
@@ -31,12 +34,14 @@ export const matchs: Match[] = [
 			name: 'Équipe D',
 			logo: 'https://example.com/team-d-logo.png',
 		},
-		score: { homeTeam: 0, visitorTeam: 0 },
+		score: { homeTeam: 1, visitorTeam: 1 },
+		place: 'Stade B',
 	},
 	{
 		id: 3,
 		utcDate: '2023-03-18T18:00:00Z',
-		status: 'SCHEDULED',
+		duration: 0,
+		status: 'finished',
 		homeTeam: {
 			id: 105,
 			name: 'Équipe E',
@@ -47,6 +52,7 @@ export const matchs: Match[] = [
 			name: 'Équipe F',
 			logo: 'https://example.com/team-f-logo.png',
 		},
-		score: { homeTeam: 0, visitorTeam: 0 },
+		score: { homeTeam: 3, visitorTeam: 0 },
+		place: 'Stade C',
 	},
 ];
