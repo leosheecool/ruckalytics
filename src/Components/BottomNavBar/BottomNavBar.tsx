@@ -11,7 +11,7 @@ const BottomNavBar = () => {
 				<Link to="/" className={styles.menu}>
 					<HiOutlineHome size={25} />
 				</Link>
-				<Link to="/" className={styles.menu}>
+				<Link to="/whiteboard" className={styles.menu}>
 					<IoMdClipboard size={25} />
 				</Link>
 				<Link to="/" className={styles.menu}>
