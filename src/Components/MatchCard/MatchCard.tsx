@@ -9,14 +9,15 @@ import dayjs from 'dayjs';
 type Props = {
 	data: Match;
 	detailed?: boolean;
+	onClick?: () => void;
 };
-const MatchCard = ({ data, detailed: isDetailed }: Props) => {
+const MatchCard = ({ data, detailed: isDetailed, onClick: handleClick }: Props) => {
 	return (
-		<div className={globalStyles.card}>
+		<div className={globalStyles.card} onClick={handleClick}>
 			{isDetailed && <p className={styles.location}>{data.location}</p>}
 			<div className={styles.scoreContainer}>
 				<div className={styles.team}>
-					<span>Home</span>
+					<span className={styles.subInformations}>Domicile</span>
 					<img
 						src={data.homeTeam.logo}
 						className={cn(styles.clubLogo, { [styles.preview]: !!!isDetailed })}
@@ -25,7 +26,9 @@ const MatchCard = ({ data, detailed: isDetailed }: Props) => {
 					<h3>{data.homeTeam.name}</h3>
 				</div>
 				<div className={styles.matchInfos}>
-					<span>{dayjs(data.utcDate).format('DD MMM HH:mm')}</span>
+					<span className={styles.subInformations}>
+						{dayjs(data.utcDate).format('DD MMM HH:mm')}
+					</span>
 					<h3>
 						{data.score.homeTeam} - {data.score.visitorTeam}
 					</h3>
@@ -37,13 +40,13 @@ const MatchCard = ({ data, detailed: isDetailed }: Props) => {
 							[styles.loose]: data.score.homeTeam < data.score.visitorTeam,
 						})}
 					>
-						{data.score.homeTeam > data.score.visitorTeam && <div>Home win</div>}
-						{data.score.homeTeam === data.score.visitorTeam && <div>Draw</div>}
-						{data.score.homeTeam < data.score.visitorTeam && <div>Home Loose</div>}
+						{data.score.homeTeam > data.score.visitorTeam && <div>Domicile gagnant</div>}
+						{data.score.homeTeam === data.score.visitorTeam && <div>Egalité</div>}
+						{data.score.homeTeam < data.score.visitorTeam && <div>Domicile Perdant</div>}
 					</div>
 				</div>
 				<div className={styles.team}>
-					<span>Visitor</span>
+					<span className={styles.subInformations}>Visiteur</span>
 					<img
 						src={data.visitorTeam.logo}
 						className={cn(styles.clubLogo, { [styles.preview]: !isDetailed })}
