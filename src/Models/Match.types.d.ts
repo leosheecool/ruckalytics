@@ -5,11 +5,12 @@ export type Team = {
 };
 
 export type GolbalStats = {
-	scrum: {
+	scrums: {
 		description: string;
 		timeCode: number;
 	}[];
-	foul: {
+	fouls: {
+		description: string;
 		timeCode: number;
 	}[];
 	// tries: number;
