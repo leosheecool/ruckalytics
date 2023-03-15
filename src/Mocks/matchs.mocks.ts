@@ -4,7 +4,7 @@ export const matchs: Match[] = [
 	{
 		id: 1,
 		utcDate: '2023-03-16T19:00:00Z',
-		duration: 90,
+		duration: 80,
 		status: 'finished',
 		homeTeam: {
 			id: 101,
@@ -18,11 +18,31 @@ export const matchs: Match[] = [
 		},
 		score: { homeTeam: 2, visitorTeam: 1 },
 		location: 'Stade A',
+		stats: {
+			scrum: [
+				{
+					description: 'Scrum gagné',
+					timeCode: 0,
+				},
+				{
+					description: 'Scrum gagné',
+					timeCode: 0,
+				},
+			],
+			foul: [
+				{
+					timeCode: 0,
+				},
+				{
+					timeCode: 0,
+				},
+			],
+		},
 	},
 	{
 		id: 2,
 		utcDate: '2023-03-17T21:00:00Z',
-		duration: 90,
+		duration: 80,
 		status: 'inProgress',
 		homeTeam: {
 			id: 103,
@@ -36,11 +56,31 @@ export const matchs: Match[] = [
 		},
 		score: { homeTeam: 1, visitorTeam: 1 },
 		location: 'Stade B',
+		stats: {
+			scrum: [
+				{
+					description: 'Scrum gagné',
+					timeCode: 0,
+				},
+				{
+					description: 'Scrum gagné',
+					timeCode: 0,
+				},
+			],
+			foul: [
+				{
+					timeCode: 0,
+				},
+				{
+					timeCode: 0,
+				},
+			],
+		},
 	},
 	{
 		id: 3,
 		utcDate: '2023-03-18T18:00:00Z',
-		duration: 0,
+		duration: 80,
 		status: 'finished',
 		homeTeam: {
 			id: 101,
@@ -54,5 +94,25 @@ export const matchs: Match[] = [
 		},
 		score: { homeTeam: 3, visitorTeam: 0 },
 		location: 'Stade C',
+		stats: {
+			scrum: [
+				{
+					description: 'Scrum gagné',
+					timeCode: 0,
+				},
+				{
+					description: 'Scrum gagné',
+					timeCode: 0,
+				},
+			],
+			foul: [
+				{
+					timeCode: 0,
+				},
+				{
+					timeCode: 0,
+				},
+			],
+		},
 	},
 ];

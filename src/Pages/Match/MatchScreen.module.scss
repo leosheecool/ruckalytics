@@ -1,0 +1,39 @@
+.container {
+	padding: 0 20px;
+}
+
+.globalInformation {
+	margin: 10px;
+}
+
+.clubLogo {
+	border-radius: 4px;
+}
+
+.scoreContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.score {
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 10px;
+}
+
+.clubName {
+	margin-top: 16px;
+}
+
+.duration {
+	border: 1px solid #06357b;
+	border-radius: 4px;
+	background-color: #06357b38;
+	padding: 8px;
+	color: #06357b;
+}
+
+.location {
+	font-size: 1.5rem;
+}
