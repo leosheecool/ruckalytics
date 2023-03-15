@@ -4,15 +4,15 @@ export type Team = {
 	logo: string;
 };
 
+type Action = {
+	description: string;
+	timeCode: number;
+	url: string;
+};
+
 export type GolbalStats = {
-	scrums: {
-		description: string;
-		timeCode: number;
-	}[];
-	fouls: {
-		description: string;
-		timeCode: number;
-	}[];
+	scrums: Action[];
+	fouls: Action[];
 	// tries: number;
 	// conversions: number;
 	// penalties: number;

@@ -23,20 +23,24 @@ export const matchs: Match[] = [
 				{
 					description: 'Scrum gagné',
 					timeCode: 170,
+					url: 'http://localhost:3000/26_27_20sec.mp4',
 				},
 				{
 					description: 'Scrum gagné',
 					timeCode: 350,
+					url: 'http://localhost:3000/test.mp4',
 				},
 			],
 			fouls: [
 				{
 					description: 'Equipe A',
 					timeCode: 195,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 				{
 					description: 'Equipe B',
 					timeCode: 652,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 			],
 		},
@@ -63,20 +67,24 @@ export const matchs: Match[] = [
 				{
 					description: 'Scrum gagné',
 					timeCode: 0,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 				{
 					description: 'Scrum gagné',
 					timeCode: 0,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 			],
 			fouls: [
 				{
 					description: 'Equipe B',
 					timeCode: 0,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 				{
 					description: 'Equipe A',
 					timeCode: 0,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 			],
 		},
@@ -103,20 +111,24 @@ export const matchs: Match[] = [
 				{
 					description: 'Scrum gagné',
 					timeCode: 170,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 				{
 					description: 'Scrum gagné',
 					timeCode: 350,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 			],
 			fouls: [
 				{
 					description: 'Equipe B',
 					timeCode: 195,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 				{
 					description: 'Equipe C',
 					timeCode: 652,
+					url: 'http://localhost:3000/test1.mp4',
 				},
 			],
 		},

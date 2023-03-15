@@ -7,11 +7,13 @@ import { secondsToTime } from 'Utils/timeConverter';
 
 type Props = {
 	stats: GolbalStats;
+	onActionClick: (url: string) => void;
+	activeVideo?: string;
 };
 
 const TABS = ['Scrums', 'Fouls'];
 
-const Stats = ({ stats }: Props) => {
+const Stats = ({ stats, onActionClick: handleActionClick, activeVideo }: Props) => {
 	const [activeTab, setActiveTab] = useState(TABS[0]);
 	return (
 		<div className={globalStyles.card}>
@@ -30,7 +32,13 @@ const Stats = ({ stats }: Props) => {
 			{stats[activeTab.toLowerCase() as keyof GolbalStats]?.map((action) => {
 				const timecode = secondsToTime(action.timeCode);
 				return (
-					<div key={action.timeCode} className={cn(globalStyles.card, styles.card)}>
+					<div
+						key={action.timeCode}
+						className={cn(globalStyles.card, styles.card, {
+							[styles.active]: activeVideo === action.url,
+						})}
+						onClick={() => handleActionClick(action.url)}
+					>
 						<p className={styles.scrum}>{action.description}</p>
 						<p className={styles.scrum}>
 							{timecode.h}:{timecode.m}:{timecode.s}
