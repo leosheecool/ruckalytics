@@ -19,22 +19,24 @@ export const matchs: Match[] = [
 		score: { homeTeam: 2, visitorTeam: 1 },
 		location: 'Stade A',
 		stats: {
-			scrum: [
+			scrums: [
 				{
 					description: 'Scrum gagné',
-					timeCode: 0,
+					timeCode: 170,
 				},
 				{
 					description: 'Scrum gagné',
-					timeCode: 0,
+					timeCode: 350,
 				},
 			],
-			foul: [
+			fouls: [
 				{
-					timeCode: 0,
+					description: 'Equipe A',
+					timeCode: 195,
 				},
 				{
-					timeCode: 0,
+					description: 'Equipe B',
+					timeCode: 652,
 				},
 			],
 		},
@@ -57,7 +59,7 @@ export const matchs: Match[] = [
 		score: { homeTeam: 1, visitorTeam: 1 },
 		location: 'Stade B',
 		stats: {
-			scrum: [
+			scrums: [
 				{
 					description: 'Scrum gagné',
 					timeCode: 0,
@@ -67,11 +69,13 @@ export const matchs: Match[] = [
 					timeCode: 0,
 				},
 			],
-			foul: [
+			fouls: [
 				{
+					description: 'Equipe B',
 					timeCode: 0,
 				},
 				{
+					description: 'Equipe A',
 					timeCode: 0,
 				},
 			],
@@ -95,22 +99,24 @@ export const matchs: Match[] = [
 		score: { homeTeam: 3, visitorTeam: 0 },
 		location: 'Stade C',
 		stats: {
-			scrum: [
+			scrums: [
 				{
 					description: 'Scrum gagné',
-					timeCode: 0,
+					timeCode: 170,
 				},
 				{
 					description: 'Scrum gagné',
-					timeCode: 0,
+					timeCode: 350,
 				},
 			],
-			foul: [
+			fouls: [
 				{
-					timeCode: 0,
+					description: 'Equipe B',
+					timeCode: 195,
 				},
 				{
-					timeCode: 0,
+					description: 'Equipe C',
+					timeCode: 652,
 				},
 			],
 		},
