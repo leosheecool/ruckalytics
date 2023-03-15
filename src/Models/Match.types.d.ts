@@ -4,6 +4,29 @@ export type Team = {
 	logo: string;
 };
 
+export type GolbalStats = {
+	scrum: {
+		description: string;
+		timeCode: number;
+	}[];
+	foul: {
+		timeCode: number;
+	}[];
+	// tries: number;
+	// conversions: number;
+	// penalties: number;
+	// dropGoals: number;
+	// penaltiesConceded: number;
+	// possesion: number;
+	// turnovers: number;
+};
+
+// export type MatchStats = {
+// 	homeTeam: TeamStats;
+// 	visitorTeam: TeamStats;
+// 	players: PlayerStats[];
+// };
+
 export type Match = {
 	id: number;
 	utcDate: string;
@@ -13,4 +36,5 @@ export type Match = {
 	visitorTeam: Team;
 	score: { homeTeam: number; visitorTeam: number };
 	location: string;
+	stats: GolbalStats;
 };

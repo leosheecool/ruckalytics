@@ -1,32 +1,28 @@
-import { matchs } from 'Mocks/matchs.mocks';
-import React from 'react';
+import { GolbalStats } from 'Models/Match.types';
 import styles from './Stats.module.scss';
+import globalStyles from 'Styles/global.module.scss';
+import cn from 'classnames';
 
-const Stats = () => {
-	const mockedData = matchs[0];
+type Props = {
+	stats: GolbalStats;
+};
 
+const Stats = ({ stats }: Props) => {
 	return (
-		<div className={styles.container}>
-			<div className={styles.card}>
-				<p className={styles.globalInformation}>{mockedData.location}</p>
-				<p className={styles.globalInformation}>{mockedData.utcDate}</p>
-				<div className={styles.scoreContainer}>
-					<div>
-						<img src={mockedData.homeTeam.logo} alt="club" className={styles.clubLogo} />
-						<p>{mockedData.homeTeam.name}</p>
-					</div>
-					<div>
-						<p className={styles.score}>
-							{mockedData.score.homeTeam} : {mockedData.score.visitorTeam}{' '}
-						</p>
-						<p>{mockedData.duration}'</p>
-					</div>
-					<div>
-						<img src={mockedData.visitorTeam.logo} alt="club" className={styles.clubLogo} />
-						<p>{mockedData.visitorTeam.name}</p>
-					</div>
+		<div className={globalStyles.card}>
+			<p className={styles.scrumTitle}>Scrums</p>
+			{stats.scrum.map((scrum, index) => (
+				<div key={index} className={cn(globalStyles.card, styles.card)}>
+					<p className={styles.scrum}>{scrum.description}</p>
+					<p className={styles.scrum}>{scrum.timeCode}</p>
 				</div>
-			</div>
+			))}
+			<p className={styles.scrumTitle}>Foul</p>
+			{stats.foul.map((foul, index) => (
+				<div key={index} className={cn(globalStyles.card, styles.card)}>
+					<p className={styles.scrum}>{foul.timeCode}</p>
+				</div>
+			))}
 		</div>
 	);
 };
