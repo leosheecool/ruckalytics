@@ -38,6 +38,7 @@ const MatchCard = ({ data, detailed: isDetailed, onClick: handleClick }: Props) 
 					<div
 						className={cn(styles.result, {
 							[styles.loose]: data.score.homeTeam < data.score.visitorTeam,
+							[styles.draw]: data.score.homeTeam === data.score.visitorTeam,
 						})}
 					>
 						{data.score.homeTeam > data.score.visitorTeam && <div>Domicile gagnant</div>}

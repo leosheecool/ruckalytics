@@ -19,13 +19,7 @@ const MatchScreen = () => {
 		() => ({
 			'#stats': <MatchCard data={mockedData} detailed />,
 			'#video': (
-				<ReactPlayer
-					className={styles.player}
-					url={videoUrl}
-					width="100%"
-					height="100%"
-					controls={true}
-				/>
+				<ReactPlayer className={styles.player} url={videoUrl} width="100%" controls={true} />
 			),
 		}),
 		[mockedData, videoUrl]
