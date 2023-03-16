@@ -7,3 +7,13 @@
 	text-align: center;
 	// width: 100%;
 }
+
+$max-height: 100vh;
+@supports (-webkit-touch-callout: none) {
+	$max-height: -webkit-fill-available;
+}
+
+.pageContainer {
+	height: calc($max-height - 160px);
+	overflow: scroll;
+}

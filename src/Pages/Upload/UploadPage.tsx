@@ -6,6 +6,7 @@ import { FaFileUpload } from 'react-icons/fa';
 import styles from './UploadPage.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
+import cn from 'classnames';
 
 const UploadPage = () => {
 	const [numPages, setNumPages] = useState<number>();
@@ -62,8 +63,8 @@ const UploadPage = () => {
 
 	return (
 		<div>
-			<PageHeader title="Upload" />
-			<div className={styles.container}>
+			<PageHeader title="Mise en ligne" hasBtns />
+			<div className={cn(styles.container, globalStyles.pageContainer)}>
 				<div className={globalStyles.card}>
 					<div>
 						<p className={styles.sectionTitle}>Importez la vidéo d'un match ici</p>
@@ -72,7 +73,7 @@ const UploadPage = () => {
 								className={styles.pdf}
 								url={videoFile ? URL.createObjectURL(videoFile) : ''}
 								width="auto"
-								height={400}
+								height={360}
 								controls={true}
 							/>
 						)}
