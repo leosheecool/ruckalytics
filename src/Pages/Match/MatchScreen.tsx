@@ -1,4 +1,4 @@
-import { DetailsHeader, MatchCard } from 'Components';
+import { PageHeader, MatchCard } from 'Components';
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Stats from './Stats/Stats';
@@ -54,7 +54,7 @@ const MatchScreen = () => {
 
 	return (
 		<div>
-			<DetailsHeader />
+			<PageHeader title="Détails" />
 			<div className={styles.container}>
 				{navigateToTab(location.hash)}
 				<Stats stats={mockedData.stats} onActionClick={handleActionClick} activeVideo={videoUrl} />

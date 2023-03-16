@@ -1,0 +1,34 @@
+.container {
+	padding: 0 40px;
+}
+
+.sectionTitle {
+	color: #06357b;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #06357b;
+	border-color: transparent;
+	border-radius: 4px;
+	color: white;
+	margin: 15px auto;
+	padding: 10px 20px;
+	font-size: 1.5rem;
+}
+
+.separator {
+	border: 1px solid #06357b;
+	margin: 2rem auto;
+	width: 500px;
+}
+
+.pdf {
+	margin: 15px auto;
+	width: fit-content;
+}
