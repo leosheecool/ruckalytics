@@ -33,18 +33,20 @@
 
 .buttonContainer {
 	position: fixed;
-	top: 0;
+	padding: 16px 8px;
+	top: 180px;
 	right: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
+	z-index: 100;
+	background-color: rgba(241, 241, 241);
 	.button {
 		background-color: transparent;
 		border: none;
 		outline: none;
-		margin-right: 10px;
 		height: fit-content;
 	}
 }

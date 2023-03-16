@@ -5,6 +5,7 @@ import { CgErase } from 'react-icons/cg';
 import { IoAmericanFootballOutline } from 'react-icons/io5';
 import { RiArrowGoBackFill } from 'react-icons/ri';
 import fieldPng from 'Assets/images/field.png';
+import { TbPencilPlus, TbPencilOff } from 'react-icons/tb';
 
 const WhiteBoard: React.FC = () => {
 	const canvasRef = useRef<CanvasDraw | null>(null);
@@ -15,7 +16,7 @@ const WhiteBoard: React.FC = () => {
 	const [showBall, setShowBall] = useState(false);
 	const [ballPosition, setBallPosition] = useState({
 		x: window.innerHeight / 2,
-		y: window.innerWidth - 10,
+		y: window.innerWidth / 2,
 	});
 	const [isDragging, setIsDragging] = useState(false);
 	const [drawMode, setDrawMode] = useState(true);
@@ -99,7 +100,7 @@ const WhiteBoard: React.FC = () => {
 				<img src={fieldPng} alt="Background" className={styles.backgroundImage} />
 				<CanvasDraw
 					ref={canvasRef}
-					canvasWidth={dimensions.width}
+					canvasWidth={dimensions.width - 50}
 					canvasHeight={dimensions.height}
 					className={styles.canvas}
 					backgroundColor="rgba(0, 0, 0, 0)"
@@ -111,8 +112,8 @@ const WhiteBoard: React.FC = () => {
 						src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/48767/rugby-football-emoji-clipart-md.png"
 						alt="Ballon"
 						style={{
-							width: 40,
-							height: 40,
+							width: 50,
+							height: 50,
 							position: 'absolute',
 							zIndex: 30,
 							left: ballPosition.x,
@@ -131,8 +132,8 @@ const WhiteBoard: React.FC = () => {
 				<button onClick={toggleBall} className={styles.button}>
 					<IoAmericanFootballOutline size={35} />
 				</button>
-				<button onClick={toggleDrawMode}>
-					{drawMode ? 'Désactiver le mode dessin' : 'Activer le mode dessin'}
+				<button onClick={toggleDrawMode} className={styles.button}>
+					{drawMode ? <TbPencilOff size={35} /> : <TbPencilPlus size={35} />}
 				</button>
 			</div>
 		</div>
