@@ -1,6 +1,11 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import CanvasDraw from 'react-canvas-draw';
 import styles from './WhiteBoard.module.scss';
+import { CgErase } from 'react-icons/cg';
+import { IoAmericanFootballOutline } from 'react-icons/io5';
+import { RiArrowGoBackFill } from 'react-icons/ri';
+import fieldPng from 'Assets/images/field.png';
+import { TbPencilPlus, TbPencilOff } from 'react-icons/tb';
 
 const WhiteBoard: React.FC = () => {
 	const canvasRef = useRef<CanvasDraw | null>(null);
@@ -9,7 +14,10 @@ const WhiteBoard: React.FC = () => {
 		height: window.innerHeight,
 	});
 	const [showBall, setShowBall] = useState(false);
-	const [ballPosition, setBallPosition] = useState({ x: 0, y: 0 });
+	const [ballPosition, setBallPosition] = useState({
+		x: window.innerHeight / 2,
+		y: window.innerWidth / 2,
+	});
 	const [isDragging, setIsDragging] = useState(false);
 	const [drawMode, setDrawMode] = useState(true);
 
@@ -38,6 +46,7 @@ const WhiteBoard: React.FC = () => {
 	};
 
 	const toggleBall = () => {
+		setDrawMode(false);
 		setShowBall(!showBall);
 	};
 
@@ -79,50 +88,52 @@ const WhiteBoard: React.FC = () => {
 		[drawMode, isDragging]
 	);
 
+	console.log('dimensions.width', dimensions.width, window.innerWidth);
 	return (
-		<div className={styles.container} onMouseDown={onMouseDown} onMouseMove={onMouseMove}>
+		<div
+			className={styles.container}
+			style={{ height: window.innerHeight - 70, width: window.innerWidth }}
+			onMouseDown={onMouseDown}
+			onMouseMove={onMouseMove}
+		>
 			<div className={styles.backgroundContainer}>
-				<img
-					src="https://www.tactictables.com/content/images/thumbs/0000272_club-160-rugby.png"
-					alt="Background"
-					className={styles.background}
+				<img src={fieldPng} alt="Background" className={styles.backgroundImage} />
+				<CanvasDraw
+					ref={canvasRef}
+					canvasWidth={dimensions.width - 50}
+					canvasHeight={dimensions.height}
+					className={styles.canvas}
+					backgroundColor="rgba(0, 0, 0, 0)"
+					disabled={!drawMode}
+					brushRadius={2}
 				/>
+				{showBall && (
+					<img
+						src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/48767/rugby-football-emoji-clipart-md.png"
+						alt="Ballon"
+						style={{
+							width: 50,
+							height: 50,
+							position: 'absolute',
+							zIndex: 30,
+							left: ballPosition.x,
+							top: ballPosition.y,
+						}}
+					/>
+				)}
 			</div>
-			<CanvasDraw
-				ref={canvasRef}
-				canvasWidth={dimensions.width}
-				canvasHeight={dimensions.height}
-				className={styles.canvas}
-				backgroundColor="rgba(0, 0, 0, 0)"
-				disabled={!drawMode}
-				brushRadius={2}
-			/>
-			{showBall && (
-				<img
-					src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/48767/rugby-football-emoji-clipart-md.png"
-					alt="Ballon"
-					style={{
-						width: 40,
-						height: 40,
-						position: 'absolute',
-						zIndex: 1,
-						left: ballPosition.x,
-						top: ballPosition.y,
-					}}
-				/>
-			)}
 			<div className={styles.buttonContainer}>
 				<button onClick={undo} className={styles.button}>
-					Effacer la dernière action
+					<RiArrowGoBackFill size={35} />
 				</button>
 				<button onClick={clear} className={styles.button}>
-					Tout effacer
+					<CgErase size={35} />
 				</button>
 				<button onClick={toggleBall} className={styles.button}>
-					Ballon
+					<IoAmericanFootballOutline size={35} />
 				</button>
-				<button onClick={toggleDrawMode}>
-					{drawMode ? 'Désactiver le mode dessin' : 'Activer le mode dessin'}
+				<button onClick={toggleDrawMode} className={styles.button}>
+					{drawMode ? <TbPencilOff size={35} /> : <TbPencilPlus size={35} />}
 				</button>
 			</div>
 		</div>
