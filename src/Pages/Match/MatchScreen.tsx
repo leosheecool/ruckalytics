@@ -5,6 +5,8 @@ import Stats from './Stats/Stats';
 import styles from './MatchScreen.module.scss';
 import { matchs } from 'Mocks/matchs.mocks';
 import ReactPlayer from 'react-player';
+import cn from 'classnames';
+import globalStyles from 'Styles/global.module.scss';
 
 const MatchScreen = () => {
 	const location = useLocation();
@@ -18,7 +20,7 @@ const MatchScreen = () => {
 			'#stats': <MatchCard data={mockedData} detailed />,
 			'#video': (
 				<ReactPlayer
-					className="react-player fixed-bottom"
+					className={styles.player}
 					url={videoUrl}
 					width="100%"
 					height="100%"
@@ -54,8 +56,8 @@ const MatchScreen = () => {
 
 	return (
 		<div>
-			<PageHeader title="Détails" />
-			<div className={styles.container}>
+			<PageHeader title="Détails" hasBtns />
+			<div className={cn(styles.container, globalStyles.pageContainer)}>
 				{navigateToTab(location.hash)}
 				<Stats stats={mockedData.stats} onActionClick={handleActionClick} activeVideo={videoUrl} />
 			</div>
