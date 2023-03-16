@@ -10,9 +10,17 @@ type Action = {
 	url: string;
 };
 
+type globalGameStats = {
+	title: string;
+	homeTeam: number;
+	visitorTeam: number;
+	unit: string;
+};
+
 export type GolbalStats = {
 	scrums: Action[];
 	fouls: Action[];
+	global: golbalGameStats[];
 	// tries: number;
 	// conversions: number;
 	// penalties: number;

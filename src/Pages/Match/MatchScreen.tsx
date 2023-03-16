@@ -1,12 +1,12 @@
 import { PageHeader, MatchCard } from 'Components';
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import Stats from './Stats/Stats';
 import styles from './MatchScreen.module.scss';
 import { matchs } from 'Mocks/matchs.mocks';
 import ReactPlayer from 'react-player';
 import cn from 'classnames';
 import globalStyles from 'Styles/global.module.scss';
+import ActionsTab from './ActionsTab/ActionsTab';
 
 const MatchScreen = () => {
 	const location = useLocation();
@@ -19,7 +19,13 @@ const MatchScreen = () => {
 		() => ({
 			'#stats': <MatchCard data={mockedData} detailed />,
 			'#video': (
-				<ReactPlayer className={styles.player} url={videoUrl} width="100%" controls={true} />
+				<ReactPlayer
+					playing={true}
+					className={styles.player}
+					url={videoUrl}
+					width="100%"
+					controls={true}
+				/>
 			),
 		}),
 		[mockedData, videoUrl]
@@ -53,7 +59,11 @@ const MatchScreen = () => {
 			<PageHeader title="Détails" hasBtns />
 			<div className={cn(styles.container, globalStyles.pageContainer)}>
 				{navigateToTab(location.hash)}
-				<Stats stats={mockedData.stats} onActionClick={handleActionClick} activeVideo={videoUrl} />
+				<ActionsTab
+					stats={mockedData.stats}
+					onActionClick={handleActionClick}
+					activeVideo={videoUrl}
+				/>
 			</div>
 		</div>
 	);

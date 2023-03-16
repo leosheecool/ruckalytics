@@ -19,22 +19,66 @@ export const matchs: Match[] = [
 		score: { homeTeam: 16, visitorTeam: 20 },
 		location: 'Stade Marcel-Deflandre',
 		stats: {
+			global: [
+				{
+					title: 'Possession',
+					homeTeam: 61,
+					visitorTeam: 39,
+					unit: '%',
+				},
+				{
+					title: 'Occupation',
+					homeTeam: 68,
+					visitorTeam: 32,
+					unit: '%',
+				},
+				{
+					title: "Min d'attaque",
+					homeTeam: 21.5,
+					visitorTeam: 12.8,
+					unit: 'min',
+				},
+				{
+					title: 'Attaques gagnées',
+					homeTeam: 93,
+					visitorTeam: 88,
+					unit: '%',
+				},
+				{
+					title: 'Touches gagnées',
+					homeTeam: 91,
+					visitorTeam: 92,
+					unit: '%',
+				},
+				{
+					title: 'Mêlées gagnées',
+					homeTeam: 60,
+					visitorTeam: 56,
+					unit: '%',
+				},
+				{
+					title: 'Mêlées jouées',
+					homeTeam: 60,
+					visitorTeam: 44,
+					unit: '%',
+				},
+			],
 			scrums: [
 				{
 					description: 'Mêlée gagné',
 					timeCode: 540,
 					// url: 'http://localhost:3000/26_27_20sec.mp4',
-					url: 'http://localhost:3000/scrum 1.mp4',
+					url: 'http://localhost:3000/scrum_1.mp4',
 				},
 				{
 					description: 'Mêlée gagnée',
 					timeCode: 700,
-					url: 'http://localhost:3000/scrum 2.mp4',
+					url: 'http://localhost:3000/scrum_2.mp4',
 				},
 				{
 					description: 'Mêlée gagnée',
 					timeCode: 1544,
-					url: 'http://localhost:3000/scrum 3.mp4',
+					url: 'http://localhost:3000/scrum_3.mp4',
 				},
 				{
 					description: 'Mêlée perdue',
@@ -114,6 +158,7 @@ export const matchs: Match[] = [
 		score: { homeTeam: 29, visitorTeam: 17 },
 		location: 'Stade B',
 		stats: {
+			global: [],
 			scrums: [
 				{
 					description: 'Scrum gagné',
@@ -158,6 +203,7 @@ export const matchs: Match[] = [
 		score: { homeTeam: 16, visitorTeam: 20 },
 		location: 'Stade C',
 		stats: {
+			global: [],
 			scrums: [
 				{
 					description: 'Scrum gagné',
@@ -202,50 +248,7 @@ export const matchs: Match[] = [
 		score: { homeTeam: 25, visitorTeam: 25 },
 		location: 'Stade C',
 		stats: {
-			scrums: [
-				{
-					description: 'Scrum gagné',
-					timeCode: 170,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Scrum gagné',
-					timeCode: 350,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
-			fouls: [
-				{
-					description: 'Equipe B',
-					timeCode: 195,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Equipe C',
-					timeCode: 652,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
-		},
-	},
-	{
-		id: 3,
-		utcDate: '2023-03-12T18:00:00Z',
-		duration: 80,
-		status: 'finished',
-		homeTeam: {
-			id: 101,
-			name: 'Co Multisport Bagneux Rugby',
-			logo: 'https://api-agregateur-static.ffr.fr/assets/embleme/club/111.jpg',
-		},
-		visitorTeam: {
-			id: 106,
-			name: 'E S Vitry',
-			logo: 'https://api-agregateur-static.ffr.fr/assets/embleme/club/706.jpg',
-		},
-		score: { homeTeam: 25, visitorTeam: 25 },
-		location: 'Stade C',
-		stats: {
+			global: [],
 			scrums: [
 				{
 					description: 'Scrum gagné',
