@@ -51,7 +51,10 @@
 		padding: 10px 20px;
 		border-radius: 4px;
 		&.loose {
-			background-color: #e8408c;
+			background-color: #de221a;
+		}
+		&.draw {
+			background-color: #06357b;
 		}
 	}
 }
