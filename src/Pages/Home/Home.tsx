@@ -18,7 +18,12 @@ const Home = () => {
 
 				<div className={styles.MatchPreviewCardContainer}>
 					{matchs.map((match, index) => (
-						<MatchCard key={match.id} data={match} onClick={() => navigate(`/match/${index}`)} />
+						<MatchCard
+							key={match.id}
+							data={match}
+							onClick={() => navigate(`/match/${index}`)}
+							detailed={index === 0}
+						/>
 					))}
 				</div>
 			</div>

@@ -1,7 +1,6 @@
 import styles from './BottomNavBar.module.scss';
 import { HiOutlineHome } from 'react-icons/hi';
 import { IoMdClipboard } from 'react-icons/io';
-import { IoStatsChartOutline } from 'react-icons/io5';
 import { AiOutlineUpload } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
@@ -18,10 +17,6 @@ const LINKS = [
 	{
 		path: '/upload',
 		icon: <AiOutlineUpload size={25} />,
-	},
-	{
-		path: '/home',
-		icon: <IoStatsChartOutline size={25} />,
 	},
 ];
 

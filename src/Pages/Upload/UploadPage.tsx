@@ -104,7 +104,7 @@ const UploadPage = () => {
 									/>
 								</Document>
 								<p>
-									Page {pageNumber} of {numPages}
+									Page {pageNumber} sur {numPages}
 								</p>
 							</>
 						)}
