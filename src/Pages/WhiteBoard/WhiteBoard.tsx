@@ -81,11 +81,13 @@ const WhiteBoard: React.FC = () => {
 
 	return (
 		<div className={styles.container} onMouseDown={onMouseDown} onMouseMove={onMouseMove}>
-			<img
-				src="https://www.tactictables.com/content/images/thumbs/0000272_club-160-rugby.png"
-				alt="Background"
-				className={styles.background}
-			/>
+			<div className={styles.backgroundContainer}>
+				<img
+					src="https://www.tactictables.com/content/images/thumbs/0000272_club-160-rugby.png"
+					alt="Background"
+					className={styles.background}
+				/>
+			</div>
 			<CanvasDraw
 				ref={canvasRef}
 				canvasWidth={dimensions.width}
