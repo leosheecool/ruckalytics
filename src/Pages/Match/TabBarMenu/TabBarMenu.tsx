@@ -8,6 +8,7 @@ import { matchs } from 'Mocks/matchs.mocks';
 import ReactPlayer from 'react-player';
 import { MatchCard } from 'Components';
 import StatsMenu from '../StatsMenu/StatsMenu';
+import LinesUpMenu from '../LinesUpMenu/LinesUpMenu';
 
 const TABS = [
 	{ key: 'global', title: 'Statistiques' },
@@ -70,7 +71,7 @@ const TabBarMenu = () => {
 	};
 
 	return (
-		<>
+		<div className={styles.container}>
 			{navigateToTab(location.hash)}
 
 			<div className={globalStyles.card}>
@@ -95,8 +96,9 @@ const TabBarMenu = () => {
 						activeVideo={videoUrl}
 					/>
 				)}
+				{activeTab.key === 'lineup' && <LinesUpMenu teams={mockedData.stats.lineup} />}
 			</div>
-		</>
+		</div>
 	);
 };
 

@@ -34,6 +34,13 @@ export type ActionList = {
 	fouls: Action[];
 };
 
+export type Player = {
+	id: number;
+	picture?: string;
+	name: string;
+	position: string;
+	number: number;
+};
 export type LineupList = {
 	homeTeam: Player[];
 	visitorTeam: Player[];
