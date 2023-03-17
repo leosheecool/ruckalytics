@@ -47,6 +47,7 @@ const WhiteBoard: React.FC = () => {
 
 	const toggleBall = () => {
 		setDrawMode(false);
+		if (!showBall) setBallPosition({ x: window.innerHeight / 2, y: window.innerWidth / 2 });
 		setShowBall(!showBall);
 	};
 
