@@ -1,0 +1,33 @@
+.statsTitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.barChartsContainer {
+	display: flex;
+	width: 100%;
+	gap: 10px;
+}
+
+.barChartContainer {
+	flex: 1;
+	background-color: #3939393d;
+	// border-radius: 4px;
+}
+
+.barChartBar {
+	height: 20px;
+	background-color: #de221a;
+
+	&.left {
+		margin-right: 0;
+		margin-left: auto;
+		background-color: #06357b;
+	}
+}
+
+.barChartValue {
+	background-color: white;
+	padding-top: 5px;
+}
