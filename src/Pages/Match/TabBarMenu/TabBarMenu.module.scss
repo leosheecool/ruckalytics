@@ -1,3 +1,11 @@
+.player {
+	margin: 0 auto;
+	height: auto !important;
+	video {
+		border-radius: 10px;
+	}
+}
+
 .container {
 	padding: 0 20px;
 }
@@ -39,50 +47,15 @@
 }
 
 .tab {
-	border-radius: 4px;
+	border-radius: 6px;
 	font-size: 1.5rem;
-	padding: 6px 16px;
-	border: 1px solid #393939;
-	background-color: #3939391a;
-	color: #393939;
+	padding: 12px 18px;
+	background-color: #f6f6f6;
+	color: #c6c6c6;
 
 	&.active {
 		border: 1px solid #06357b;
 		background-color: #06357b1e;
 		color: #06357b;
 	}
-}
-
-.statsTitle {
-	font-size: 1.5rem;
-	font-weight: 600;
-	margin-bottom: 1rem;
-}
-
-.barChartsContainer {
-	display: flex;
-	width: 100%;
-	gap: 10px;
-}
-
-.barChartContainer {
-	flex: 1;
-	background-color: #3939393d;
-	// border-radius: 4px;
-}
-
-.barChartBar {
-	height: 20px;
-	background-color: #de221a;
-
-	&.left {
-		margin-right: 0;
-		margin-left: auto;
-		background-color: #06357b;
-	}
-}
-
-.barChartValue {
-	background-color: white;
-	padding-top: 5px;
 }

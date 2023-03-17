@@ -10,24 +10,39 @@ type Action = {
 	url: string;
 };
 
-type globalGameStats = {
+type GlobalGameStats = {
 	title: string;
 	homeTeam: number;
 	visitorTeam: number;
 	unit: string;
 };
 
-export type GolbalStats = {
+// export type GolbalStats = {
+// 	// scrums: Action[];
+// 	// fouls: Action[];
+// 	global: golbalGameStats[];
+// 	// tries: number;
+// 	// conversions: number;
+// 	// penalties: number;
+// 	// dropGoals: number;
+// 	// penaltiesConceded: number;
+// 	// possesion: number;
+// 	// turnovers: number;
+// };
+export type ActionList = {
 	scrums: Action[];
 	fouls: Action[];
-	global: golbalGameStats[];
-	// tries: number;
-	// conversions: number;
-	// penalties: number;
-	// dropGoals: number;
-	// penaltiesConceded: number;
-	// possesion: number;
-	// turnovers: number;
+};
+
+export type LineupList = {
+	homeTeam: Player[];
+	visitorTeam: Player[];
+};
+
+export type GolbalStats = {
+	global: GlobalGameStats[];
+	actions: ActionList;
+	lineup: LineupList;
 };
 
 // export type MatchStats = {

@@ -1,0 +1,20 @@
+.card {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.tabButton {
+	border-radius: 6px;
+	font-size: 1rem;
+	padding: 12px 18px;
+	background-color: #f6f6f6;
+	color: #c6c6c6;
+	margin-right: 10px;
+	border: none;
+	&.active {
+		border: 1px solid #06357b;
+		background-color: #06357b1e;
+		color: #06357b;
+	}
+}

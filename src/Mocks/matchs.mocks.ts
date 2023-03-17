@@ -63,81 +63,87 @@ export const matchs: Match[] = [
 					unit: '%',
 				},
 			],
-			scrums: [
-				{
-					description: 'Mêlée gagné',
-					timeCode: 540,
-					// url: 'http://localhost:3000/26_27_20sec.mp4',
-					url: 'http://localhost:3000/scrum_1.mp4',
-				},
-				{
-					description: 'Mêlée gagnée',
-					timeCode: 700,
-					url: 'http://localhost:3000/scrum_2.mp4',
-				},
-				{
-					description: 'Mêlée gagnée',
-					timeCode: 1544,
-					url: 'http://localhost:3000/scrum_3.mp4',
-				},
-				{
-					description: 'Mêlée perdue',
-					timeCode: 1600,
-					url: 'http://localhost:3000/scrum and foul.mp4',
-				},
-				{
-					description: 'Mêlée gagnée',
-					timeCode: 1740,
-					url: 'http://localhost:3000/scrum 4.mp4',
-				},
-				{
-					description: 'Mêlée perdue',
-					timeCode: 2140,
-					url: 'http://localhost:3000/scrum 4.mp4',
-				},
-				{
-					description: 'Mêlée perdue',
-					timeCode: 2490,
-					url: 'http://localhost:3000/scrum 4.mp4',
-				},
-				{
-					description: 'Mêlée gagnée',
-					timeCode: 2950,
-					url: 'http://localhost:3000/scrum 4.mp4',
-				},
-				{
-					description: 'Mêlée perdue',
-					timeCode: 3180,
-					url: 'http://localhost:3000/scrum 4.mp4',
-				},
-			],
-			fouls: [
-				{
-					description: 'Equipe A',
-					timeCode: 1600,
-					url: 'http://localhost:3000/scrum and foul.mp4',
-				},
-				{
-					description: 'Equipe B',
-					timeCode: 1928,
-					url: 'http://localhost:3000/foul 2.mp4',
-				},
-				{
-					description: 'Equipe A',
-					timeCode: 1977,
-					url: 'http://localhost:3000/foul 2.mp4',
-				},
-				{
-					description: 'Equipe A',
-					timeCode: 2187,
-					url: 'http://localhost:3000/foul 2.mp4',
-				},
-				{
-					description: 'Equipe A',
-					timeCode: 2375,
-					url: 'http://localhost:3000/foul 2.mp4',
-				},
-			],
+			actions: {
+				scrums: [
+					{
+						description: 'Mêlée gagné',
+						timeCode: 540,
+						// url: 'http://localhost:3000/26_27_20sec.mp4',
+						url: 'http://localhost:3000/scrum_1.mp4',
+					},
+					{
+						description: 'Mêlée gagnée',
+						timeCode: 700,
+						url: 'http://localhost:3000/scrum_2.mp4',
+					},
+					{
+						description: 'Mêlée gagnée',
+						timeCode: 1544,
+						url: 'http://localhost:3000/scrum_3.mp4',
+					},
+					{
+						description: 'Mêlée perdue',
+						timeCode: 1600,
+						url: 'http://localhost:3000/scrum and foul.mp4',
+					},
+					{
+						description: 'Mêlée gagnée',
+						timeCode: 1740,
+						url: 'http://localhost:3000/scrum 4.mp4',
+					},
+					{
+						description: 'Mêlée perdue',
+						timeCode: 2140,
+						url: 'http://localhost:3000/scrum 4.mp4',
+					},
+					{
+						description: 'Mêlée perdue',
+						timeCode: 2490,
+						url: 'http://localhost:3000/scrum 4.mp4',
+					},
+					{
+						description: 'Mêlée gagnée',
+						timeCode: 2950,
+						url: 'http://localhost:3000/scrum 4.mp4',
+					},
+					{
+						description: 'Mêlée perdue',
+						timeCode: 3180,
+						url: 'http://localhost:3000/scrum 4.mp4',
+					},
+				],
+				fouls: [
+					{
+						description: 'Equipe A',
+						timeCode: 1600,
+						url: 'http://localhost:3000/scrum and foul.mp4',
+					},
+					{
+						description: 'Equipe B',
+						timeCode: 1928,
+						url: 'http://localhost:3000/foul 2.mp4',
+					},
+					{
+						description: 'Equipe A',
+						timeCode: 1977,
+						url: 'http://localhost:3000/foul 2.mp4',
+					},
+					{
+						description: 'Equipe A',
+						timeCode: 2187,
+						url: 'http://localhost:3000/foul 2.mp4',
+					},
+					{
+						description: 'Equipe A',
+						timeCode: 2375,
+						url: 'http://localhost:3000/foul 2.mp4',
+					},
+				],
+			},
+			lineup: {
+				homeTeam: [],
+				visitorTeam: [],
+			},
 		},
 	},
 	{
@@ -157,32 +163,39 @@ export const matchs: Match[] = [
 		},
 		score: { homeTeam: 29, visitorTeam: 17 },
 		location: 'Stade B',
+
 		stats: {
 			global: [],
-			scrums: [
-				{
-					description: 'Scrum gagné',
-					timeCode: 0,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Scrum gagné',
-					timeCode: 0,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
-			fouls: [
-				{
-					description: 'Equipe B',
-					timeCode: 0,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Equipe A',
-					timeCode: 0,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
+			actions: {
+				scrums: [
+					{
+						description: 'Scrum gagné',
+						timeCode: 0,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+					{
+						description: 'Scrum gagné',
+						timeCode: 0,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+				],
+				fouls: [
+					{
+						description: 'Equipe B',
+						timeCode: 0,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+					{
+						description: 'Equipe A',
+						timeCode: 0,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+				],
+			},
+			lineup: {
+				homeTeam: [],
+				visitorTeam: [],
+			},
 		},
 	},
 	{
@@ -204,30 +217,36 @@ export const matchs: Match[] = [
 		location: 'Stade C',
 		stats: {
 			global: [],
-			scrums: [
-				{
-					description: 'Scrum gagné',
-					timeCode: 170,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Scrum gagné',
-					timeCode: 350,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
-			fouls: [
-				{
-					description: 'Equipe B',
-					timeCode: 195,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Equipe C',
-					timeCode: 652,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
+			lineup: {
+				homeTeam: [],
+				visitorTeam: [],
+			},
+			actions: {
+				scrums: [
+					{
+						description: 'Scrum gagné',
+						timeCode: 170,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+					{
+						description: 'Scrum gagné',
+						timeCode: 350,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+				],
+				fouls: [
+					{
+						description: 'Equipe B',
+						timeCode: 195,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+					{
+						description: 'Equipe C',
+						timeCode: 652,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+				],
+			},
 		},
 	},
 	{
@@ -249,30 +268,36 @@ export const matchs: Match[] = [
 		location: 'Stade C',
 		stats: {
 			global: [],
-			scrums: [
-				{
-					description: 'Scrum gagné',
-					timeCode: 170,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Scrum gagné',
-					timeCode: 350,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
-			fouls: [
-				{
-					description: 'Equipe B',
-					timeCode: 195,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-				{
-					description: 'Equipe C',
-					timeCode: 652,
-					url: 'http://localhost:3000/test1.mp4',
-				},
-			],
+			lineup: {
+				homeTeam: [],
+				visitorTeam: [],
+			},
+			actions: {
+				scrums: [
+					{
+						description: 'Scrum gagné',
+						timeCode: 170,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+					{
+						description: 'Scrum gagné',
+						timeCode: 350,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+				],
+				fouls: [
+					{
+						description: 'Equipe B',
+						timeCode: 195,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+					{
+						description: 'Equipe C',
+						timeCode: 652,
+						url: 'http://localhost:3000/test1.mp4',
+					},
+				],
+			},
 		},
 	},
 ];
